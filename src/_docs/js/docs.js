@@ -3,7 +3,9 @@
  */
 
 $(document).ready(function() {
-  var $content = $('#content');
+  var $content = $('.styleguide-content');
+
+  console.log($content);
 
   // Create on-the-fly example code samples
   $content.find('.code-chunk').each(function(i, el) {
