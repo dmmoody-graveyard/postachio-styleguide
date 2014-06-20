@@ -1,0 +1,22 @@
+{
+  "name": "postachio-styleguide",
+  "version": "0.1.0",
+  "description": "Postach.io style guide",
+  "homepage": "http://postach.io",
+  "authors": [
+    "Postach.io <hello@postach.io>",
+    "Brandon Brown <brandon@postach.io>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "handlebars": "~1.3.0"
+  }
+}

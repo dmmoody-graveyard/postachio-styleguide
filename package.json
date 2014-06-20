@@ -1,0 +1,25 @@
+{
+  "name": "postachio-styleguide",
+  "description": "Postach.io style guide",
+  "author": "Postach.io",
+  "version": "0.1.0",
+  "homepage": "http://postach.io",
+  "contributors": [
+    {
+      "name": "Brandon Brown",
+      "email": "brandon@postach.io",
+      "url": "http://brandonb.io"
+    }
+  ],
+  "private": true,
+  "dependencies": {
+    "glob": "~3.2.8",
+    "grunt": "~0.4.1",
+    "grunt-autoprefixer": "^0.7.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-html-build": "^0.3.2"
+  }
+}

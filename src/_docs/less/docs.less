@@ -1,0 +1,83 @@
+@import '../../less/variables.less';
+@import '../../less/mixins.less';
+@import '../../less/utilities.less';
+
+// For the docs page only
+.header {
+  height: auto;
+  width: 100%;
+  padding: 100px 0;
+  .text-center;
+  background-color: @green;
+
+  h1 { color: @white; }
+
+  .wrench-pencil {
+    width: 90px;
+    margin-bottom: 40px;
+  }
+
+  .nut-logo {
+    width: 32px;
+    margin-top: 40px
+  }
+}
+
+.styleguide-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.container-content {
+  > h1 { border-bottom: solid 1px @page-header-border-color; }
+}
+
+.side-nav { margin-top: 30px; }
+
+.code-chunk {
+  [class*="col-"] {
+    padding: 15px 0;
+    color: rgba(255,255,255,.85);
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    background-color: #333;
+
+    // For nested example
+    > div div { background-color: #777; }
+  }
+}
+
+.example {
+  position: relative;
+  margin-bottom: 80px;
+
+  &:before {
+    content: 'Example';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 5px;
+    font-family: @font-family-sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #222;
+    background-color: #dfdfdf;
+    border-right: 1px solid #d2d2d2;
+    border-bottom: 1px solid #d2d2d2;
+    border-radius: 0 0 3px 0;
+  }
+
+  &.example-single { margin-bottom: 20px; }
+
+  code { padding-top: 24px; }
+}
+
+
+.width-example {
+  td [class*="width-"] {
+    background-color: #777;
+  }
+}

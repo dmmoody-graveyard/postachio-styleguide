@@ -1,0 +1,116 @@
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}
+.header {
+  height: auto;
+  width: 100%;
+  padding: 100px 0;
+  text-align: center;
+  background-color: #37cca2;
+}
+.header h1 {
+  color: #ffffff;
+}
+.header .wrench-pencil {
+  width: 90px;
+  margin-bottom: 40px;
+}
+.header .nut-logo {
+  width: 32px;
+  margin-top: 40px;
+}
+.styleguide-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+.container-content > h1 {
+  border-bottom: solid 1px #eeeeee;
+}
+.side-nav {
+  margin-top: 30px;
+}
+.code-chunk [class*="col-"] {
+  padding: 15px 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  background-color: #333;
+}
+.code-chunk [class*="col-"] > div div {
+  background-color: #777;
+}
+.example {
+  position: relative;
+  margin-bottom: 80px;
+}
+.example:before {
+  content: 'Example';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 2px 5px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #222;
+  background-color: #dfdfdf;
+  border-right: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  border-radius: 0 0 3px 0;
+}
+.example.example-single {
+  margin-bottom: 20px;
+}
+.example code {
+  padding-top: 24px;
+}
+.width-example td [class*="width-"] {
+  background-color: #777;
+}
