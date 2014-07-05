@@ -44,42 +44,44 @@
 <div class="code-chunk">
   <blockquote>
     <p>Way better philosophical quote with a cited source</p>
-    <p><cite>&mdash; Some Famous Person</cite></p>
+    <p><cite>Some Famous Person</cite></p>
   </blockquote>
 </div>
 
 <div class="code-chunk">
   <blockquote class="blockquote-reverse">
     <p>Whaaaaaaat? A quote with a cited source, reversed!</p>
-    <p><cite>&mdash; Another Famous Person</cite></p>
+    <p><cite>Another Famous Person</cite></p>
   </blockquote>
 </div>
 
 <h4>Buttons</h4>
 
 <div class="code-chunk">
-  <input type="button" value="Input type button">
-  <input type="reset" value="Input type reset">
-  <input type="submit" value="Input type submit">
-  <input type="submit" value="Input type submit disabled" disabled>
-  <button type="button">Button type button</button>
-  <button type="reset">Button type reset</button>
-  <button type="submit">Button type submit</button>
-  <button type="button" disabled>Button type button disabled</button>
+  <input type="button" class="btn btn-default" value="Input type button">
+  <input type="reset" class="btn btn-default" value="Input type reset">
+  <input type="submit" class="btn btn-default" value="Input type submit">
+  <input type="submit" class="btn btn-default" value="Input type submit disabled" disabled>
+</div>
+<div class="code-chunk">
+  <button type="button" class="btn btn-default">Button type button</button>
+  <button type="reset" class="btn btn-default">Button type reset</button>
+  <button type="submit" class="btn btn-default">Button type submit</button>
+  <button type="button" class="btn btn-default" disabled>Button type button disabled</button>
 </div>
 
 <h4>Figure</h4>
 
 <div class="code-chunk">
   <figure>
-    <img src="http://placekitten.com/240/240" alt="Image Alt Text">
+    <img src="http://placekitten.com/240/240" alt="Image Alt Text" />
     <figcaption>Figcaption content</figcaption>
   </figure>
 </div>
 
 <div class="code-chunk">
   <figure>
-    <img src="http://placekitten.com/240/240" alt="Image Alt Text">
+    <img src="http://placekitten.com/240/240" alt="Image Alt Text" />
     <figcaption>
       <h4>Figure Title</h4>
       Figcaption content
@@ -92,35 +94,74 @@
 <div class="code-chunk">
   <form>
     <fieldset>
-      <div><label>Text input</label> <input type="text"></div>
-      <div><label>Text input with placeholder</label> <input type="text" placeholder="I'm placeholder text"></div>
-      <div><label>Readonly input</label> <input type="text" value="Read only text input" readonly></div>
-      <div><label>Disabled input</label> <input type="text" value="Disabled text input" disabled></div>
-      <div><label>Required input <span class="required">*</span></label> <input type="text" required></div>
-      <div><label>Email input</label> <input type="email"></div>
-      <div><label>Search input</label> <input type="search"></div>
-      <div><label>Speech recognition input</label> <input type="text" id="speech" name="speech" x-webkit-speech=""></div>
-      <div><label>Tel input</label> <input type="tel"></div>
-      <div><label>Phone (International)</label> <input name="field_country_code" maxlength="3" /> - <input name="field_city_code" maxlength="4" /> - <input name="field_phone_int" maxlength="8" /></div>
-      <div><label>URL input</label> <input type="url" placeholder="http://"></div>
-      <div><label>Password input</label> <input type="password" value="password"></div>
-      <div><label>Select field</label> <select><option>Option 01</option><option>Option 02</option></select></div>
-      <div><label>Multiple select field</label><select multiple size="5"><option>Option 1</option><option>Option 2</option><option>Option 3</option><option>Option 4</option><option>Option 5</option><option>Option 6</option><option>Option 7</option><option>Option 8</option><option>Option 9</option><option>Option 10</option></select></div>
-      <div><label>Radio input</label> <input type="radio" name="rad"></div>
-      <div><label>Checkbox input</label> <input type="checkbox"></div>
-      <div><label><input type="radio" name="rad"> Radio input</label></div>
-      <div><label><input type="checkbox"> Checkbox input</label></div>
-      <div><label>File input</label> <input type="file"></div>
-      <div><label>Textarea</label> <textarea cols="30" rows="5" >Textarea text</textarea></div>
-      <div><label>Color input</label> <input type="color" value="#000000"></div>
-      <div><label>Number input</label> <input type="number" value="5" min="0" max="10"></div>
-      <div><label>Range input</label> <input type="range" id="range" value="0" min="0" max="100"> <output for="range">0</output>
-      <script>
-        if (document.querySelector) {
-          document.querySelector('#range').onchange = function(e) {
-            e.target.nextElementSibling.innerText = e.target.value;
-          }
-        }
+      <div>
+        <label>Text input</label> <input type="text">
+      </div>
+      <div>
+        <label>Text input with placeholder</label> <input type="text" placeholder="I'm placeholder text">
+      </div>
+      <div>
+        <label>Readonly input</label> <input type="text" value="Read only text input" readonly>
+      </div>
+      <div>
+        <label>Disabled input</label> <input type="text" value="Disabled text input" disabled>
+      </div>
+      <div>
+        <label>Required input <span class="required">*</span></label> <input type="text" required>
+      </div>
+      <div>
+        <label>Email input</label> <input type="email">
+      </div>
+      <div>
+        <label>Search input</label> <input type="search">
+      </div>
+      <div>
+        <label>Speech recognition input</label> <input type="text" id="speech" name="speech" />
+      </div>
+      <div>
+        <label>Tel input</label> <input type="tel">
+      </div>
+      <div>
+        <label>Phone (International)</label> <input name="field_country_code" maxlength="3" /> - <input name="field_city_code" maxlength="4" /> - <input name="field_phone_int" maxlength="8" />
+      </div>
+      <div>
+        <label>URL input</label> <input type="url" placeholder="http://">
+      </div>
+      <div>
+        <label>Password input</label> <input type="password" value="password">
+      </div>
+      <div>
+        <label>Select field</label> <select><option>Option 01</option><option>Option 02</option></select>
+      </div>
+      <div>
+        <label>Multiple select field</label><select multiple size="5"><option>Option 1</option><option>Option 2</option><option>Option 3</option><option>Option 4</option><option>Option 5</option><option>Option 6</option><option>Option 7</option><option>Option 8</option><option>Option 9</option><option>Option 10</option></select>
+      </div>
+      <div>
+        <label>Radio input</label> <input type="radio" name="rad">
+      </div>
+      <div>
+        <label>Checkbox input</label> <input type="checkbox">
+      </div>
+      <div>
+        <label><input type="radio" name="rad"> Radio input</label>
+      </div>
+      <div>
+        <label><input type="checkbox"> Checkbox input</label>
+      </div>
+      <div>
+        <label>File input</label> <input type="file">
+      </div>
+      <div>
+        <label>Textarea</label> <textarea cols="30" rows="5" >Textarea text</textarea>
+      </div>
+      <div>
+        <label>Color input</label> <input type="color" value="#000000">
+      </div>
+      <div>
+        <label>Number input</label> <input type="number" value="5" min="0" max="10">
+      </div>
+      <div>
+        <label>Range input</label> <input type="range" id="range" value="0" min="0" max="100"> <output for="range">0</output>
       </script>
       </div>
       <div><label>Date input</label> <input type="date"></div>
@@ -136,11 +177,21 @@
 <div class="code-chunk">
   <form>
     <fieldset>
-      <div><label>Readonly text input</label> <input type="text" value="Readonly text input" readonly></div>
-      <div><label>Readonly color input</label> <input type="color" value="#000000" readonly></div>
-      <div><label>Readonly range input</label> <input type="range" readonly></div>
-      <div><label>Readonly number input</label> <input type="number" value="5" min="0" max="10" readonly></div>
-      <div><label>Readonly textarea</label> <textarea cols="30" rows="5" readonly>Textarea text</textarea></div>
+      <div>
+        <label>Readonly text input</label> <input type="text" value="Readonly text input" readonly>
+      </div>
+      <div>
+        <label>Readonly color input</label> <input type="color" value="#000000" readonly>
+      </div>
+      <div>
+        <label>Readonly range input</label> <input type="range" readonly>
+      </div>
+      <div>
+        <label>Readonly number input</label> <input type="number" value="5" min="0" max="10" readonly>
+      </div>
+      <div>
+        <label>Readonly textarea</label> <textarea cols="30" rows="5" readonly>Textarea text</textarea>
+      </div>
     </fieldset>
   </form>
 </div>
@@ -148,15 +199,33 @@
 <div class="code-chunk">
   <form>
     <fieldset>
-      <div><label>Disabled text input</label> <input type="text" value="Disabled text input" disabled></div>
-      <div><label>Disabled select field</label> <select disabled><option>Option 01</option><option>Option 02</option></select></div>
-      <div><label>Disabled file input</label> <input type="file" disabled></div>
-      <div><label>Disabled radio input</label> <input type="radio" name="rad" disabled></div>
-      <div><label>Disabled checkbox input</label> <input type="checkbox" disabled></div>
-      <div><label>Disabled color input</label> <input type="color" value="#000000" disabled></div>
-      <div><label>Disabled range input</label> <input type="range" disabled></div>
-      <div><label>Disabled number input</label> <input type="number" value="5" min="0" max="10" disabled></div>
-      <div><label>Disabled textarea</label> <textarea cols="30" rows="5" disabled>Textarea text</textarea></div>
+      <div>
+        <label>Disabled text input</label> <input type="text" value="Disabled text input" disabled>
+      </div>
+      <div>
+        <label>Disabled select field</label> <select disabled><option>Option 01</option><option>Option 02</option></select>
+      </div>
+      <div>
+        <label>Disabled file input</label> <input type="file" disabled>
+      </div>
+      <div>
+        <label>Disabled radio input</label> <input type="radio" name="rad" disabled>
+      </div>
+      <div>
+        <label>Disabled checkbox input</label> <input type="checkbox" disabled>
+      </div>
+      <div>
+        <label>Disabled color input</label> <input type="color" value="#000000" disabled>
+      </div>
+      <div>
+        <label>Disabled range input</label> <input type="range" disabled>
+      </div>
+      <div>
+        <label>Disabled number input</label> <input type="number" value="5" min="0" max="10" disabled>
+      </div>
+      <div>
+        <label>Disabled textarea</label> <textarea cols="30" rows="5" disabled>Textarea text</textarea>
+      </div>
     </fieldset>
   </form>
 </div>
@@ -207,13 +276,6 @@
           <option>50</option>
           <option>75</option>
         </datalist>
-        <script>
-        if (document.querySelector) {
-          document.querySelector('#number_input').onchange = function(e) {
-            e.target.nextElementSibling.innerText = e.target.value;
-          }
-        }
-      </script>
       </div>
       <div>
         <label>Color input with datalist</label>

@@ -2,10 +2,10 @@
  * Docs js
  */
 
+
+
 $(document).ready(function() {
   var $content = $('.styleguide-content');
-
-  console.log($content);
 
   // Create on-the-fly example code samples
   $content.find('.code-chunk').each(function(i, el) {
@@ -70,4 +70,18 @@ $(document).ready(function() {
     // Insert the code block after the .code-chunk
     $el.html($exampleBlock.html());
   });
+
+  /*
+   * Check for browser support
+   */
+  if('SpeechRecognition' in window) {
+    // Supported
+  } else {
+    $('#speech').remove()
+  }
+
+  $('#range, #number_input').on('change', function(e) {
+    var $this = $(this);
+    $this.next().text($this.val());
+  })
 })

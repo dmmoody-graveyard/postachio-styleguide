@@ -68,11 +68,11 @@
   margin: 0 auto;
   padding-top: 40px;
 }
-.container-content > h1 {
-  border-bottom: solid 1px #eeeeee;
-}
 .side-nav {
   margin-top: 30px;
+}
+.code-chunk {
+  margin-bottom: 14px;
 }
 .code-chunk [class*="col-"] {
   padding: 15px 0;
