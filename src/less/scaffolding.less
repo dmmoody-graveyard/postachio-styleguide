@@ -48,6 +48,11 @@ a {
   color: @link-color;
   text-decoration: none;
 
+  // Truncate all long links
+  // https://twitter.com/srescio/status/483307255740530688
+  width: 100%;
+  .text-overflow();
+
   &:hover,
   &:focus {
     color: @link-hover-color;
@@ -86,6 +91,24 @@ img {
   border-radius: @border-radius-large;
 }
 
+<<<<<<< Updated upstream
+=======
+// Image thumbnails
+//
+// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
+.img-thumbnail {
+  padding: @thumbnail-padding;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  border: 1px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .2s ease-in-out);
+
+  // Keep them at most 100% wide
+  .img-responsive(inline-block);
+}
+
+>>>>>>> Stashed changes
 // Perfect circle
 .img-circle {
   border-radius: 50%; // set radius in percents
