@@ -31,7 +31,7 @@
 // Background color for `<body>`.
 @body-bg:               #fff;
 // Global text color on `<body>`.
-@text-color:            @grey-dark;
+@text-color:            @black;
 
 // Global textual link color.
 @link-color:            @brand-primary;
@@ -172,7 +172,7 @@
 // `<input>` border color
 @input-border:                   #ccc;
 // `<input>` border radius
-@input-border-radius:            @border-radius-base;
+@input-border-radius:            3px;
 // Border color for inputs on focus
 @input-border-focus:             #66afe9;
 
@@ -276,6 +276,44 @@
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
 
+// Modals
+
+// Padding applied to the modal body
+@modal-inner-padding:         15px;
+
+// Padding applied to the modal title
+@modal-title-padding:         15px;
+// Modal title line-height
+@modal-title-line-height:     @line-height-base;
+
+// Background color of modal content area
+@modal-content-bg:                             #fff;
+// Modal content border color
+@modal-content-border-color:                   rgba(0,0,0,.2);
+// Modal content border color **for IE8**
+@modal-content-fallback-border-color:          #999;
+
+// Modal backdrop background color
+@modal-backdrop-bg:           #000;
+// Modal backdrop opacity
+@modal-backdrop-opacity:      .5;
+// Modal header border color
+@modal-header-border-color:   #e5e5e5;
+// Modal footer border color
+@modal-footer-border-color:   @modal-header-border-color;
+
+@modal-lg:                    900px;
+@modal-md:                    600px;
+@modal-sm:                    300px;
+
+
+// Close
+
+@close-font-weight:           bold;
+@close-color:                 #000;
+@close-text-shadow:           0 1px 0 #fff;
+
+
 // Code
 
 @code-color:                  #c7254e;
@@ -308,7 +346,9 @@
 
 @blockquote-bg:               @grey-lighter;
 @blockquote-font-size:        (@font-size-base * 1.25);
-@blockquote-small-color:      @grey-light;
+@blockquote-lead-color:       @black;
+@blockquote-text-color:       @grey;
+@blockquote-cite-color:       @grey-light;
 
 
 // Miscellaneous

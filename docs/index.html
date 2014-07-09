@@ -22,35 +22,27 @@
 
   </div>
   <main class="container styleguide-content">
-<h4>Address</h4>
-
-<div class="code-chunk">
-  <address>
-    Company Name, Inc.<br>
-    811 7th Ave, Suite 700<br>
-    Manhattan, NY 10019<br>
-    USA
-  </address>
-</div>
-
 <h4>Blockquotes</h4>
 
 <div class="code-chunk">
   <blockquote>
-    <p>Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
+    <p class="blockquote-lead">Some sort of famous witty quote marked up with a &lt;blockquote> and a child &lt;p> element.</p>
+    <p>Bite my shiny metal ass. Bender, hurry! This fuel's expensive! Also, we're dying! You seem malnourished. Are you suffering from intestinal parasites?</p>
   </blockquote>
 </div>
 
 <div class="code-chunk">
   <blockquote>
-    <p>Way better philosophical quote with a cited source</p>
+    <p class="blockquote-lead">Way better philosophical quote with a cited source</p>
+    <p>No! I want to live! There are still too many things I don't own! It's just like the story of the grasshopper and the octopus.</p>
     <p><cite>Some Famous Person</cite></p>
   </blockquote>
 </div>
 
 <div class="code-chunk">
   <blockquote class="blockquote-reverse">
-    <p>Whaaaaaaat? A quote with a cited source, reversed!</p>
+    <p class="blockquote-lead">Whaaaaaaat? A quote with a cited source, reversed!</p>
+    <p>All year long, the grasshopper kept burying acorns for winter, while the octopus mooched off his girlfriend and watched TV. But then the winter came, and the grasshopper died, and the octopus ate all his acorns. Also he got a race car. Is any of this getting through to you?</p>
     <p><cite>Another Famous Person</cite></p>
   </blockquote>
 </div>
@@ -70,277 +62,395 @@
   <button type="button" class="btn btn-default" disabled>Button type button disabled</button>
 </div>
 
-<h4>Figure</h4>
-
-<div class="code-chunk">
-  <figure>
-    <img src="http://placekitten.com/240/240" alt="Image Alt Text" />
-    <figcaption>Figcaption content</figcaption>
-  </figure>
-</div>
-
-<div class="code-chunk">
-  <figure>
-    <img src="http://placekitten.com/240/240" alt="Image Alt Text" />
-    <figcaption>
-      <h4>Figure Title</h4>
-      Figcaption content
-    </figcaption>
-  </figure>
-</div>
-
 <h4>Form fields</h4>
 
-<div class="code-chunk">
-  <form>
-    <fieldset>
-      <div>
-        <label>Text input</label> <input type="text">
+<div class="">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Text input</label>
       </div>
-      <div>
-        <label>Text input with placeholder</label> <input type="text" placeholder="I'm placeholder text">
+      <div class="col-md-9">
+        <input type="text" class="form-control">
       </div>
-      <div>
-        <label>Readonly input</label> <input type="text" value="Read only text input" readonly>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Text input with placeholder</label>
       </div>
-      <div>
-        <label>Disabled input</label> <input type="text" value="Disabled text input" disabled>
+      <div class="col-md-9">
+        <input type="text" class="form-control" placeholder="I'm placeholder text">
       </div>
-      <div>
-        <label>Required input <span class="required">*</span></label> <input type="text" required>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Readonly input</label>
       </div>
-      <div>
-        <label>Email input</label> <input type="email">
+      <div class="col-md-9">
+        <input type="text" class="form-control" value="Read only text input" readonly>
       </div>
-      <div>
-        <label>Search input</label> <input type="search">
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled input</label>
       </div>
-      <div>
-        <label>Speech recognition input</label> <input type="text" id="speech" name="speech" />
+      <div class="col-md-9">
+        <input type="text" class="form-control" value="Disabled text input" disabled>
       </div>
-      <div>
-        <label>Tel input</label> <input type="tel">
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Required input <span class="required">*</span></label>
       </div>
-      <div>
-        <label>Phone (International)</label> <input name="field_country_code" maxlength="3" /> - <input name="field_city_code" maxlength="4" /> - <input name="field_phone_int" maxlength="8" />
+      <div class="col-md-9">
+        <input type="text" class="form-control" required>
       </div>
-      <div>
-        <label>URL input</label> <input type="url" placeholder="http://">
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Email input</label>
       </div>
-      <div>
-        <label>Password input</label> <input type="password" value="password">
+      <div class="col-md-9">
+        <input type="email" class="form-control">
       </div>
-      <div>
-        <label>Select field</label> <select><option>Option 01</option><option>Option 02</option></select>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Search input</label>
       </div>
-      <div>
-        <label>Multiple select field</label><select multiple size="5"><option>Option 1</option><option>Option 2</option><option>Option 3</option><option>Option 4</option><option>Option 5</option><option>Option 6</option><option>Option 7</option><option>Option 8</option><option>Option 9</option><option>Option 10</option></select>
+      <div class="col-md-9">
+        <input type="search" class="form-control">
       </div>
-      <div>
-        <label>Radio input</label> <input type="radio" name="rad">
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Speech recognition input</label>
       </div>
-      <div>
-        <label>Checkbox input</label> <input type="checkbox">
+      <div class="col-md-9">
+        <input type="text" class="form-control" id="speech" name="speech" />
       </div>
-      <div>
-        <label><input type="radio" name="rad"> Radio input</label>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Tel input</label>
       </div>
-      <div>
-        <label><input type="checkbox"> Checkbox input</label>
+      <div class="col-md-9">
+        <input type="tel" class="form-control">
       </div>
-      <div>
-        <label>File input</label> <input type="file">
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Phone (International)</label>
       </div>
-      <div>
-        <label>Textarea</label> <textarea cols="30" rows="5" >Textarea text</textarea>
+      <div class="col-md-9">
+        <div class="input-group">
+          <input name="field_country_code" class="form-control col-md-2" maxlength="3" />
+          <input name="field_city_code" class="form-control col-md-3" maxlength="4" />
+          <input name="field_phone_int" class="form-control col-md-4" maxlength="8" />
+        </div>
       </div>
-      <div>
-        <label>Color input</label> <input type="color" value="#000000">
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">URL input</label>
       </div>
-      <div>
-        <label>Number input</label> <input type="number" value="5" min="0" max="10">
+      <div class="col-md-9">
+        <input type="url" class="form-control" placeholder="http://">
       </div>
-      <div>
-        <label>Range input</label> <input type="range" id="range" value="0" min="0" max="100"> <output for="range">0</output>
-      </script>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Password input</label>
       </div>
-      <div><label>Date input</label> <input type="date"></div>
-      <div><label>Month input</label> <input type="month"></div>
-      <div><label>Week input</label> <input type="week"></div>
-      <div><label>Time input</label> <input type="time"></div>
-      <div><label>Datetime input</label> <input type="datetime"></div>
-      <div><label>Datetime-local input</label> <input type="datetime-local"></div>
-    </fieldset>
+      <div class="col-md-9">
+        <input type="password" class="form-control" value="password">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Select field</label>
+      </div>
+      <div class="col-md-9">
+        <select class="form-control">
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Multiple select field</label>
+      </div>
+      <div class="col-md-9">
+        <select class="form-control" multiple size="5">
+          <option>Option 1</option>
+          <option>Option 2</option>
+          <option>Option 3</option>
+          <option>Option 4</option>
+          <option>Option 5</option>
+          <option>Option 6</option>
+          <option>Option 7</option>
+          <option>Option 8</option>
+          <option>Option 9</option>
+          <option>Option 10</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+     <div class="col-md-3">
+       <label>Radio input</label>
+     </div>
+     <div class="col-md-9">
+        <div class="radio">
+          <label>
+            <input type="radio" >
+            Radio!
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label>Checkbox input</label>
+      </div>
+      <div class="col-md-9">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox">
+            Checkbox
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">File input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="file" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Textarea</label>
+      </div>
+      <div class="col-md-9">
+        <textarea cols="30" rows="5" class="form-control">Textarea text</textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Color input</label>
+      </div>
+      <div class="col-md-1">
+        <input type="color" class="form-control" value="#000000">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Number input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="number" class="form-control" value="5" min="0" max="10">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Date input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="date" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Month input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="month" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Week input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="week" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Time input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="time" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Datetime input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="datetime" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Datetime-local input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="datetime-local" class="form-control">
+      </div>
+    </div>
   </form>
 </div>
 
-<div class="code-chunk">
-  <form>
-    <fieldset>
-      <div>
-        <label>Readonly text input</label> <input type="text" value="Readonly text input" readonly>
+
+<div class="">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Readonly text input</label>
       </div>
-      <div>
-        <label>Readonly color input</label> <input type="color" value="#000000" readonly>
+      <div class="col-md-9">
+        <input type="text" class="form-control" value="Readonly text input" readonly>
       </div>
-      <div>
-        <label>Readonly range input</label> <input type="range" readonly>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Readonly color input</label>
       </div>
-      <div>
-        <label>Readonly number input</label> <input type="number" value="5" min="0" max="10" readonly>
+      <div class="col-md-2">
+        <input type="color" value="#000000" class="form-control" readonly>
       </div>
-      <div>
-        <label>Readonly textarea</label> <textarea cols="30" rows="5" readonly>Textarea text</textarea>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Readonly number input</label>
       </div>
-    </fieldset>
+      <div class="col-md-9">
+        <input type="number" class="form-control" value="5" min="0" max="10" readonly>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Readonly textarea</label>
+      </div>
+      <div class="col-md-9">
+        <textarea class="form-control" cols="30" rows="5" readonly>Textarea text</textarea>
+      </div>
+    </div>
   </form>
 </div>
 
-<div class="code-chunk">
-  <form>
-    <fieldset>
-      <div>
-        <label>Disabled text input</label> <input type="text" value="Disabled text input" disabled>
+
+<div class="">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled text input</label>
       </div>
-      <div>
-        <label>Disabled select field</label> <select disabled><option>Option 01</option><option>Option 02</option></select>
+      <div class="col-md-9">
+        <input type="text" class="form-control" value="Disabled text input" disabled>
       </div>
-      <div>
-        <label>Disabled file input</label> <input type="file" disabled>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled select field</label>
       </div>
-      <div>
-        <label>Disabled radio input</label> <input type="radio" name="rad" disabled>
+      <div class="col-md-9">
+        <select class="form-control" disabled>
+          <option>Option 01</option>
+          <option>Option 02</option>
+        </select>
       </div>
-      <div>
-        <label>Disabled checkbox input</label> <input type="checkbox" disabled>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled file input</label>
       </div>
-      <div>
-        <label>Disabled color input</label> <input type="color" value="#000000" disabled>
+      <div class="col-md-9">
+        <input type="file" class="form-control" disabled>
       </div>
-      <div>
-        <label>Disabled range input</label> <input type="range" disabled>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled radio input</label>
       </div>
-      <div>
-        <label>Disabled number input</label> <input type="number" value="5" min="0" max="10" disabled>
+      <div class="col-md-9">
+        <input type="radio" class="form-control" name="rad" disabled>
       </div>
-      <div>
-        <label>Disabled textarea</label> <textarea cols="30" rows="5" disabled>Textarea text</textarea>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled checkbox input</label>
       </div>
-    </fieldset>
+      <div class="col-md-9">
+        <input type="checkbox" class="form-control" disabled>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled color input</label>
+      </div>
+      <div class="col-md-1">
+        <input type="color" class="form-control" value="#000000" disabled>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled number input</label>
+      </div>
+      <div class="col-md-9">
+        <input type="number" class="form-control" value="5" min="0" max="10" disabled>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-3">
+        <label class="control-label">Disabled textarea</label>
+      </div>
+      <div class="col-md-9">
+        <textarea class="form-control" cols="30" rows="5" disabled>Textarea text</textarea>
+      </div>
+    </div>
   </form>
 </div>
 
-<div class="code-chunk">
-  <form>
-    <fieldset>
-      <legend>Fieldset with legend</legend>
-      <p><label>Text Input</label> <input type="text"></p>
-      <p><input type="submit" value="Submit"></p>
-    </fieldset>
-
-    <fieldset>
-      <p>Fieldset without legend</p>
-      <p><label>Text Input</label> <input type="text"></p>
-      <p><input type="submit" value="Submit"></p>
-    </fieldset>
-
-    <fieldset>
-      <legend>Fieldset with a very, very, very, very, very, long legend that can test the display of word wrapping to see how it looks.</legend>
-      <p><label>Text Input</label> <input type="text"></p>
-      <p><input type="submit" value="Submit"></p>
-    </fieldset>
-  </form>
-</div>
-
-<div class="code-chunk">
-  <form>
-    <fieldset>
-      <div>
-        <label>Text input with datalist</label>
-        <input type="text" value="" list="fav-color" placeholder="Type your favorite color" />
-        <datalist id="fav-color">
-          <option value="Red"></option>
-          <option value="Orange"></option>
-          <option value="Yellow"></option>
-          <option value="Green"></option>
-          <option value="Blue"></option>
-          <option value="Purple"></option>
-        </datalist>
-      </div>
-      <div>
-        <label>Range input with datalist</label>
-        <input id="number_input" type="range" value="0" min="0" max="100" list="number" />
-        <output for="number_input">0</output>
-        <datalist id="number">
-          <option>25</option>
-          <option>50</option>
-          <option>75</option>
-        </datalist>
-      </div>
-      <div>
-        <label>Color input with datalist</label>
-        <input type="color" value="#000000" list="color" />
-        <datalist id="color">
-          <option>#ff0000</option>
-          <option>#0000ff</option>
-          <option>#00ff00</option>
-          <option>#ffff00</option>
-          <option>#00ffff</option>
-        </datalist>
-      </div>
-      <div>
-        <label>Date input with datalist</label>
-        <input type="date" list="days" />
-        <datalist id="days">
-          <option label="Independence Day">2013-07-04</option>
-          <option label="Labor Day">2013-09-02</option>
-          <option label="Columbus Day">2013-10-14</option>
-        </datalist>
-      </div>
-      <div>
-        <label>Time input with datalist</label>
-        <input type="time" list="times" />
-        <datalist id="times">
-          <option label="Midnight">00:00</option>
-          <option>06:00</option>
-          <option label="Noon">12:00</option>
-          <option>18:00</option>
-        </datalist>
-      </div>
-      <div>
-        <label>Datetime-local input with datalist</label>
-        <input type="datetime-local" list="datetime-locals" />
-        <datalist id="datetime-locals">
-          <option label="Santa Visit">2012-12-24T23:59</option>
-          <option label="Chrismas party">2012-12-25T18:00</option>
-          <option>2012-12-30T00:00</option>
-          <option label="Happy New Year">2013-01-01T00:00</option>
-        </datalist>
-      </div>
-      <div>
-        <label>Month input with datalist</label>
-        <input type="month" list="months" />
-        <datalist id="months">
-          <option label="End of last century">2000-12</option>
-          <option>2010-01</option>
-          <option>2011-01</option>
-          <option>2012-01</option>
-          <option>2013-01</option>
-        </datalist>
-      </div>
-      <div>
-        <label>Week input with datalist</label>
-        <input type="week" list="weeks" />
-        <datalist id="weeks">
-          <option label="First week of 2013">2013-W01</option>
-          <option label="Second week of 2013">2013-W02</option>
-          <option label="13th week of 2013">2013-W13</option>
-          <option label="The last week of 2013">2013-W52</option>
-        </datalist>
-      </div>
-    </fieldset>
-  </form>
-</div>
 
 <h4>Headings</h4>
 

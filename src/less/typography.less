@@ -180,19 +180,24 @@ blockquote {
     }
   }
 
-  // Note: Deprecated small and .small as of v3.1.0
-  // Context: https://github.com/twbs/bootstrap/issues/11660
+  p {
+    color: @blockquote-text-color;
+  }
+
   footer,
-  small,
   cite {
     display: block;
     font-size: 80%; // back to default font-size
     line-height: @line-height-base;
-    color: @blockquote-small-color;
+    color: @blockquote-cite-color;
 
     &:before {
       content: '\2014 \00A0'; // em dash, nbsp
     }
+  }
+
+  .blockquote-lead {
+    color: @blockquote-lead-color;
   }
 }
 
