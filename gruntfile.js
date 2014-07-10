@@ -38,8 +38,7 @@ module.exports = function(grunt) {
           },
           watchTask: true,
           open: false,
-          debounce: 800,
-          scrollProportionally: false
+          debounce: 800
         },
         bsFiles: {
           src: [

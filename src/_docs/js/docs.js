@@ -23,8 +23,12 @@ $(document).ready(function() {
       nodes.push(el.replace('  ',''))
     });
 
+    // Decode any html entities
+    var nodeElements = nodes.join('\n')
+    var $decodedBlock = $('<textarea />').html(nodeElements).text();
+
     // Insert the text of .code-chunk into the pre block
-    $exampleBlock.text(nodes.join('\n'));
+    $exampleBlock.text($decodedBlock);
 
     // Highlight the code block appropriately
     hljs.configure({ languages: ['html', 'css'] });
