@@ -1,8 +1,8 @@
 module.exports = function(grunt) {
-  'use strict'
+  'use strict';
 
   // Force use of Unix newlines
-  grunt.util.linefeed = '\n'
+  grunt.util.linefeed = '\n';
 
   var config = {
     pkg : grunt.file.readJSON('package.json'),
@@ -27,6 +27,28 @@ module.exports = function(grunt) {
       },
       docs: {
         src: 'docs/css/*.css'
+      }
+    },
+
+    browserSync: {
+      dev: {
+        options: {
+          server: {
+            baseDir: "./"
+          },
+          watchTask: true,
+          open: false,
+          notify: false,
+          debounce: 800,
+          scrollProportionally: false
+        },
+        bsFiles: {
+          src: [
+            'src/**/*.html',
+            'src/**/*.less',
+            'src/**/*.js'
+          ]
+        },
       }
     },
 
@@ -74,7 +96,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: [
-          '**/*.less',
+          'src/**/*.less',
           'src/**/*.js'
         ],
         tasks: [
@@ -86,18 +108,19 @@ module.exports = function(grunt) {
       },
       docs: {
         files: [
-          'src/_docs/**/*.html',
+          'src/**/*.html',
         ],
         tasks: [
           'htmlbuild:docs'
         ]
       }
     }
-  }
+  };
 
-  grunt.initConfig(config)
+  grunt.initConfig(config);
 
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-less');
@@ -111,6 +134,7 @@ module.exports = function(grunt) {
     'autoprefixer',
     'cssmin',
     'htmlbuild:docs',
+    'browserSync',
     'watch'
-  ])
+  ]);
 }

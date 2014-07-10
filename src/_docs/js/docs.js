@@ -2,8 +2,6 @@
  * Docs js
  */
 
-
-
 $(document).ready(function() {
   var $content = $('.styleguide-content');
 

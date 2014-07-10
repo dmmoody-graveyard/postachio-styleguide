@@ -16,11 +16,13 @@ then install dependencies with `npm`
 npm install && npm install -g grunt-cli
 ```
 
-Run a simple webserver from the `docs` folder to view the styleguide in your browser at `http://localhost:8000/docs/`:
+and finally, run
 
 ```
-python -m SimpleHTTPServer
+grunt
 ```
+
+This spins up a static file server using [BrowserSync](http://browsersync.io) from the root of the project, so you'll have to open the `docs` folder to view the styleguide in your browser at [`http://localhost:3000/docs/`](http://localhost:3000/docs/)
 
 ## Filing bugs
 
